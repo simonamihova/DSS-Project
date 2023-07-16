@@ -1,0 +1,34 @@
+.App{
+    background-color: rgb(244, 171, 185);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    gap: 1em;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+
+}
+
+header{
+    grid-area: header;
+    background-color: brown;
+    
+}
+
+.content-list{
+    grid-area: main;
+    background-color: aliceblue;
+}
+
+.content-details{
+    grid-area: aside;
+    background-color: cadetblue;
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkmagenta;
+}
