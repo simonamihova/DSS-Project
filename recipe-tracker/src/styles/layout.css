@@ -14,21 +14,26 @@
 
 header{
     grid-area: header;
-    background-color: brown;
+    background-color: rgb(244, 171, 185);
+    text-align: center;
+    padding: 10px;
     
 }
 
 .content-list{
     grid-area: main;
     background-color: aliceblue;
+    padding: 10px;
 }
 
 .content-details{
     grid-area: aside;
-    background-color: cadetblue;
+    background-color: rgb(162, 238, 241);
 }
 
-footer{
+.footer{
     grid-area: footer;
-    background-color: darkmagenta;
+    background-color: rgb(237, 167, 237);
+    text-align: center;
+    padding-top: 2em;
 }
