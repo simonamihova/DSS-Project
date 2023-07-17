@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 100px auto 50px;
     gap: 1em;
     grid-template-areas: 
     "header header"
@@ -12,10 +12,12 @@
 
 }
 
-header{
+.navbar{
     grid-area: header;
     background-color: rgb(244, 171, 185);
     text-align: center;
+    color:aliceblue;
+    font: 5em;
     padding: 10px;
     
 }
@@ -29,11 +31,13 @@ header{
 .content-details{
     grid-area: aside;
     background-color: rgb(162, 238, 241);
+    padding: 10px;
 }
 
 .footer{
     grid-area: footer;
     background-color: rgb(237, 167, 237);
     text-align: center;
-    padding-top: 2em;
+    color:aliceblue;
+    padding-top: 1em;
 }

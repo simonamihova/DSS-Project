@@ -10,5 +10,38 @@ interface Props{
 
 const RecipeList: React.FC<Props> = (props: Props) =>{
     const[isRecipeDeleted, setIsRecipeDeleted] = useState(false);
-    
-}
+    const [selectedRecipe, setRecipe] = useState<Recipe>();
+
+    const handleClick = (id: Number, ignoreItem: boolean) =>{
+        let foundRecipe = props.recipes.find((item) => item.id === id) as Recipe;
+        props.onSelectedRecipe(foundRecipe);
+
+    };
+
+    const handleDelete = (id: number) => {
+        let deletedRecipe = props.recipes.find((item) => item.id === id) as Recipe;
+        setRecipe(selectedRecipe);
+        const updatedRecipes = props.recipes.filter((Recipe) => Recipe.id !== id);
+        props.onDeleteRecipe(updatedRecipes);
+    };
+    return(
+        <>
+            <h2>Grade List</h2>
+
+            {props.recipes.map((item) => (
+                <li key={item.id} onClick={(ev) => {handleClick(item.id, isRecipeDeleted) }}>
+                    <p className="id">{item.id}</p>
+                    <p className="field1">{item.name}</p>
+                    <p className="field2">{item.ingredients}</p>
+                    <p className="field3">{item.instructions}</p>
+                    <p className="field4">{item.cookingTime}</p>
+                    <p className="field5">{item.publicationDate.toDateString()}</p>
+
+                    <button className="deleteButton" onClick={() => handleDelete(item.id)}>Delete Recipe</button>
+                </li>
+            ))}
+        </>
+    );
+};
+
+export default RecipeList;

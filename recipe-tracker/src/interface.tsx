@@ -5,4 +5,5 @@ export interface Recipe{
     instructions: string;
     cookingTime: number;
     publicationDate: Date;
+    active: boolean,
 }
