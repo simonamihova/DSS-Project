@@ -26,7 +26,7 @@ const RecipeList: React.FC<Props> = (props: Props) =>{
     };
     return(
         <>
-            <h2>Grade List</h2>
+            <h2>Recipe List</h2>
 
             {props.recipes.map((item) => (
                 <li key={item.id} onClick={(ev) => {handleClick(item.id, isRecipeDeleted) }}>

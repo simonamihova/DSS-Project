@@ -1,5 +1,5 @@
 .App{
-    background-color: rgb(244, 171, 185);
+    background-color: rgb(241, 202, 210);
     min-height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -14,7 +14,7 @@
 
 .navbar{
     grid-area: header;
-    background-color: rgb(244, 171, 185);
+    background-color: rgb(237, 167, 237);
     text-align: center;
     color:aliceblue;
     font: 5em;
@@ -24,13 +24,15 @@
 
 .content-list{
     grid-area: main;
-    background-color: aliceblue;
+    background-color:  rgb(241, 190, 200);
+    color:aliceblue;
     padding: 10px;
 }
 
 .content-details{
     grid-area: aside;
-    background-color: rgb(162, 238, 241);
+    background-color:  rgb(241, 190, 200);
+    color:aliceblue;
     padding: 10px;
 }
 
@@ -41,3 +43,25 @@
     color:aliceblue;
     padding-top: 1em;
 }
+
+.button {
+    background-color: #7171e1;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .field{
+    border-radius: 5px;
+    border-color: #f2f2f2;
+    background-color: #f2f2f2;
+    color: darkgray;
+    padding: 5px;
+    margin-top: 12px;
+  }

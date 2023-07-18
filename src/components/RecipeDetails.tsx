@@ -23,7 +23,7 @@ interface Props {
     const[selectedRecipe, setRecipe] = useState<Recipe>(clearedRecipe);
     useEffect(() => {
       if(props.selectedRecipe.active){
-        setRecipe(selectedRecipe);
+        setRecipe(props.selectedRecipe);
       }
       else{
         handleClear();
@@ -63,8 +63,9 @@ interface Props {
     <h2>Recipe Details:</h2>
     <form onSubmit={handleSubmit}>
         <div>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Name: </label>
         <input
+            className='field'
             type="text"
             id="field1"
             name="name"
@@ -74,8 +75,9 @@ interface Props {
         />
         </div>
         <div>
-        <label htmlFor="ingredients">ingredients:</label>
+        <label htmlFor="ingredients">Ingredients: </label>
         <input
+            className='field'
             type="text"
             id="field2"
             name="ingredients"
@@ -85,8 +87,9 @@ interface Props {
         />
         </div>
         <div>
-        <label htmlFor="instructions">instructions:</label>
+        <label htmlFor="instructions">Instructions: </label>
         <input
+            className='field'
             type="text"
             id="field3"
             name="instructions"
@@ -96,8 +99,9 @@ interface Props {
         />
         </div>
         <div>
-        <label htmlFor="cookingTime">cookingTime:</label>
+        <label htmlFor="cookingTime">Cooking Time: </label>
         <input
+            className='field'
             type="number"
             id="field4"
             name="cookingTime"
@@ -107,8 +111,9 @@ interface Props {
         />
         </div>
         <div>
-        <label htmlFor="publicationDate">Date:</label>
+        <label htmlFor="publicationDate">Date: </label>
         <input
+            className='field'
             type="date"
             id="field5"
             name="publicationDate"
@@ -117,10 +122,10 @@ interface Props {
             required
         />
         </div>
-        <button id='saveButton' type='submit'>Save</button>
+        <button className = 'button' id='saveButton' type='submit'>Save</button>
     </form>
 
-    <button id='clearButton' onClick={handleClear}>Clear</button>
+    <button className = 'button' id='clearButton' onClick={handleClear}>Clear</button>
 
 </>
 
