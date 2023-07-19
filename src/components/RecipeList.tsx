@@ -31,13 +31,13 @@ const RecipeList: React.FC<Props> = (props: Props) =>{
             {props.recipes.map((item) => (
                 <li key={item.id} onClick={(ev) => {handleClick(item.id, isRecipeDeleted) }}>
                     <p className="id">{item.id}</p>
-                    <p className="field1">{item.name}</p>
-                    <p className="field2">{item.ingredients}</p>
-                    <p className="field3">{item.instructions}</p>
-                    <p className="field4">{item.cookingTime}</p>
+                    <p className="field1">Name: {item.name}</p>
+                    <p className="field2">Ingredients: {item.ingredients}</p>
+                    <p className="field3">Instructions: {item.instructions}</p>
+                    <p className="field4"> Cooking time: {item.cookingTime} min</p>
                     <p className="field5">{item.publicationDate.toDateString()}</p>
 
-                    <button className="deleteButton" onClick={() => handleDelete(item.id)}>Delete Recipe</button>
+                    <button className="button" onClick={() => handleDelete(item.id)}>Delete Recipe</button>
                 </li>
             ))}
         </>

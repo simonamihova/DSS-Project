@@ -73,7 +73,7 @@ function App() {
   return (
     <div className="App">
      <div className = 'navbar'>
-      <h1>Supichka 2.0</h1>
+      <h1>Supichka 2.0 <img src="https://www.vecteezy.com/png/9391563-hot-vegetable-soup-clipart-design-illustration" alt="logo" /></h1>
       
      </div> 
      <div className='content-list'>

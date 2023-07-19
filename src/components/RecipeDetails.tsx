@@ -21,6 +21,7 @@ interface Props {
     };
 
     const[selectedRecipe, setRecipe] = useState<Recipe>(clearedRecipe);
+
     useEffect(() => {
       if(props.selectedRecipe.active){
         setRecipe(props.selectedRecipe);
@@ -43,8 +44,8 @@ interface Props {
 
     const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target;
-      setRecipe(prevRecipe => ({...prevRecipe, date : new Date(value)}));
-  };
+      setRecipe(prevRecipe => ({...prevRecipe, publicationDate : new Date(value)}));
+    };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -63,7 +64,8 @@ interface Props {
     <h2>Recipe Details:</h2>
     <form onSubmit={handleSubmit}>
         <div>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name: 
+        </label>
         <input
             className='field'
             type="text"
@@ -112,6 +114,7 @@ interface Props {
         </div>
         <div>
         <label htmlFor="publicationDate">Date: </label>
+        <br></br>
         <input
             className='field'
             type="date"
