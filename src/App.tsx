@@ -3,6 +3,7 @@ import './styles/App.css';
 import {Recipe} from './interface';
 import RecipeDetails from './components/RecipeDetails';
 import RecipeList from './components/RecipeList';
+import soup from './images/soup.png'
 
 function App() {
 
@@ -74,6 +75,7 @@ function App() {
     <div className="App">
      <div className = 'navbar'>
       <h1>Supichka 2.0 </h1>
+      <img  className='logo' src={soup} alt='logo' width={100} height={100}/>
      </div>
      <div className='content-list'>
      <RecipeList recipes = {recipes} onSelectedRecipe={handleRecipeSelection} onDeleteRecipe={(newRecipes) => setRecipes(handleRecipeDelete(newRecipes))} />

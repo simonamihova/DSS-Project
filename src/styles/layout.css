@@ -36,6 +36,8 @@
     color:aliceblue;
     padding: 10px;
     border-radius: 10px;
+   
+    
 }
 
 .footer{
@@ -57,6 +59,8 @@
     text-decoration:none;
     display: inline-block;
     font-size: 14px;
+
+    margin-top: 20px;
   }
   .button:hover{
     background-color: darkorchid;
@@ -69,7 +73,7 @@
     background-color: #f2f2f2;
     color: darkgray;
     padding: 5px;
-    margin-top: 12px;
+    margin-top: 5px;
   }
 
   li{
@@ -77,8 +81,19 @@
   }
 
 
-  /*.logo {
-    grid-area: logo;
-    max-width: 100px;
-    background-color: rgb(237, 167, 237);
-  }*/
+  .logo {
+    grid-area: header;
+    max-width: 50px;
+    max-height: 50px;
+    size-adjust:inherit;
+    position: relative;
+    bottom: 65px;
+    left: 190px;
+  }
+
+  label,
+  input
+  {
+    display: block;
+  }
+

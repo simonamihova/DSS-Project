@@ -114,7 +114,6 @@ interface Props {
         </div>
         <div>
         <label htmlFor="publicationDate">Date: </label>
-        <br></br>
         <input
             className='field'
             type="date"
@@ -126,9 +125,11 @@ interface Props {
         />
         </div>
         <button className = 'button' id='saveButton' type='submit'>Save</button>
+        <button className = 'button' id='clearButton' onClick={handleClear}>Clear</button>  
+
     </form>
 
-    <button className = 'button' id='clearButton' onClick={handleClear}>Clear</button>
+    
 
 </>
 
