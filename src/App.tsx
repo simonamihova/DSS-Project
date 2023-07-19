@@ -73,12 +73,10 @@ function App() {
   return (
     <div className="App">
      <div className = 'navbar'>
-      <h1>Supichka 2.0 <img src="https://www.vecteezy.com/png/9391563-hot-vegetable-soup-clipart-design-illustration" alt="logo" /></h1>
-      
-     </div> 
+      <h1>Supichka 2.0 </h1>
+     </div>
      <div className='content-list'>
      <RecipeList recipes = {recipes} onSelectedRecipe={handleRecipeSelection} onDeleteRecipe={(newRecipes) => setRecipes(handleRecipeDelete(newRecipes))} />
-
      </div >
      <div className='content-details'>
      <RecipeDetails onSave={handleSaveRecipe} onUpdate={handleRecipeUpdate} selectedRecipe={selectedRecipe} />

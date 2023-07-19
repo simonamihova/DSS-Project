@@ -75,6 +75,10 @@
   li{
     list-style:none;
   }
-  .logo {
+
+
+  /*.logo {
+    grid-area: logo;
     max-width: 100px;
-  }
+    background-color: rgb(237, 167, 237);
+  }*/
