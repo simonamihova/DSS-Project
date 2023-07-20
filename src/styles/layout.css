@@ -1,6 +1,7 @@
 .App{
-    background-color: rgb(241, 202, 210);
+    background-color: rgb(249, 232, 236);
     min-height: 100vh;
+    min-width: 100vp;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 100px auto 50px;
@@ -9,17 +10,21 @@
     "header header"
     "main aside"
     "footer footer";
-
+    font-family: 'Times New Roman', Times, serif;
 }
+
+body, html{
+    width: 100vp;
+    min-height: 100%;
+    margin: 0 auto;
+  }
 
 .navbar{
     grid-area: header;
-    background-color: rgb(237, 167, 237);
+    background-color: rgb(226, 175, 202);
     text-align: center;
     color:aliceblue;
-    font: 5em;
-    padding: 10px;
-    
+    padding: 0;
 }
 
 .content-list{
@@ -36,20 +41,22 @@
     color:aliceblue;
     padding: 10px;
     border-radius: 10px;
-   
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     
 }
 
 .footer{
     grid-area: footer;
-    background-color: rgb(237, 167, 237);
+    background-color:  rgb(226, 175, 202);
     text-align: center;
     color:aliceblue;
     padding-top: 1em;
 }
 
 .button {
-    background-color: #7171e1;
+    background-color: #9e9ef0;
     border: none;
     color: white;
     border-radius: 6px;
@@ -62,8 +69,9 @@
 
     margin-top: 20px;
   }
+
   .button:hover{
-    background-color: darkorchid;
+    background-color: rgb(201, 127, 238);
 
   }
 
@@ -74,10 +82,17 @@
     color: darkgray;
     padding: 5px;
     margin-top: 5px;
+    box-sizing: content-box;
   }
 
   li{
     list-style:none;
+  }
+
+  li::after{
+    display: flex;
+    border: 1px solid  rgb(226, 175, 202);
+    content: "";
   }
 
 
@@ -97,3 +112,32 @@
     display: block;
   }
 
+  .form{
+    margin-top: 20%;
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+
+  .wrapper-main{
+    max-width: 100%;
+    margin: 0 auto;
+    }
+
+
+  @media (max-width: 600px){
+    .wrapper-main{
+        max-width: 100%;
+    }
+
+    .form{
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 20px;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .wrapper-main{
+        max-width: 100%;
+       }
+  }

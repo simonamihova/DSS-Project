@@ -20,6 +20,7 @@ const RecipeList: React.FC<Props> = (props: Props) =>{
 
     const handleDelete = (id: number) => {
         let deletedRecipe = props.recipes.find((item) => item.id === id) as Recipe;
+        deletedRecipe.active = false;
         setRecipe(selectedRecipe);
         const updatedRecipes = props.recipes.filter((Recipe) => Recipe.id !== id);
         props.onDeleteRecipe(updatedRecipes);
@@ -27,7 +28,8 @@ const RecipeList: React.FC<Props> = (props: Props) =>{
     return(
         <>
             <h2>Recipe List</h2>
-
+            {props.recipes.length === 0 ? <h3>Empty list.... Share your ideas with us! Fill in the details section on the right
+            </h3>: null }
             {props.recipes.map((item) => (
                 <li key={item.id} onClick={(ev) => {handleClick(item.id, isRecipeDeleted) }}>
                     <p className="id">{item.id}</p>

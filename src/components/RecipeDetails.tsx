@@ -29,17 +29,15 @@ interface Props {
       else{
         handleClear();
       }
-    },[props.selectedRecipe])
+    },[props.onSave])
 
     const handleClear = () =>{
       setRecipe(clearedRecipe);
-
     };
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) =>{
       const {name, value} = e.target;
       setRecipe(prevRecipe => ({...prevRecipe, [name] : value}));
-
     };
 
     const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -56,13 +54,16 @@ interface Props {
         props.onSave(selectedRecipe);
     }
 
+    
+
 
   };
 
   return(
     <>
+    
+    <form className='form' onSubmit={handleSubmit}>
     <h2>Recipe Details:</h2>
-    <form onSubmit={handleSubmit}>
         <div>
         <label htmlFor="name">Name: 
         </label>
