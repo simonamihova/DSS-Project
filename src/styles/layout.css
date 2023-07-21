@@ -14,7 +14,7 @@
 }
 
 body, html{
-    width: 100vp;
+    width: 100%;
     min-height: 100%;
     margin: 0 auto;
   }
@@ -22,6 +22,7 @@ body, html{
 .navbar{
     grid-area: header;
     background-color: rgb(226, 175, 202);
+    border-bottom: 5px solid;
     text-align: center;
     color:aliceblue;
     padding: 0;
@@ -33,7 +34,7 @@ body, html{
     color:aliceblue;
     padding: 10px;
     border-radius: 10px;
-}
+  }
 
 .content-details{
     grid-area: aside;
@@ -49,7 +50,9 @@ body, html{
 
 .footer{
     grid-area: footer;
+    position: relative;
     background-color:  rgb(226, 175, 202);
+    border-top: 5px solid;
     text-align: center;
     color:aliceblue;
     padding-top: 1em;
@@ -71,7 +74,7 @@ body, html{
   }
 
   .button:hover{
-    background-color: rgb(201, 127, 238);
+    background-color: npnrgb(201, 127, 238);
 
   }
 
@@ -110,6 +113,27 @@ body, html{
   input
   {
     display: block;
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+ 
+  ::-webkit-scrollbar-thumb {
+    background:#9e9ef0; 
+    border-radius: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9e9ef0; 
   }
 
   .form{

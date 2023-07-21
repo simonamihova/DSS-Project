@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { environment } from "../environment";
+import { environment } from "D:\recipe-tracker\node_modules\@jest\environment""
 
 test("test", async ({ page }) => {
   await Promise.all([
