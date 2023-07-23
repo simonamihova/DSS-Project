@@ -39,7 +39,7 @@ const RecipeList: React.FC<Props> = (props: Props) =>{
                     <p className="field4"> Cooking time: {item.cookingTime} min</p>
                     <p className="field5">{item.publicationDate.toDateString()}</p>
 
-                    <button className="button" onClick={() => handleDelete(item.id)}>Delete Recipe</button>
+                    <button className="deleteButton" onClick={() => handleDelete(item.id)}>Delete Recipe</button>
                 </li>
             ))}
         </>

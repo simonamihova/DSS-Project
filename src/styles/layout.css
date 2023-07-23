@@ -74,9 +74,30 @@ body, html{
   }
 
   .button:hover{
-    background-color: npnrgb(201, 127, 238);
+    background-color: purple;
 
   }
+
+  .deleteButton {
+    background-color: #ec93b2;
+    border: white solid 0.5px;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 14px;
+
+    margin-top: 20px;
+  }
+
+  .deleteButton:hover{
+    background-color: rgb(192, 97, 113);
+
+  }
+
 
   .field{
     border-radius: 5px;
